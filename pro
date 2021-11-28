@@ -1,4 +1,3 @@
-game:GetService("Players").LocalPlayer.PlayerGui.LobbyGui.Menu.Events.Testing.Visible = true
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local colors = {
@@ -17,8 +16,8 @@ local AutoSkip = Window:NewTab("AutoSkip")
 local AutoSkip = AutoSkip:NewSection("AutoSkip")
 local S = Window:NewTab("Settings")
 local S = S:NewSection("UI")
-Home:NewButton("--Enabled Matchmaking Beta Mode", "", function()
-    print("Testing")
+Home:NewButton("Click to enbale matchmaking beta (ONLY WORKS AT LOBBY)", "", function()
+    game:GetService("Players").LocalPlayer.PlayerGui.LobbyGui.Menu.Events.Testing.Visible = true
 end)
 S:NewKeybind("Keybind", "", Enum.KeyCode.F, function()
 	Library:ToggleUI()
